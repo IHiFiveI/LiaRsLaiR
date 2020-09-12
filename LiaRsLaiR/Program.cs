@@ -2,11 +2,13 @@
 
 namespace LiaRsLaiR
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        [STAThread]
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+            using (var game = new Game1())
+                game.Run();
         }
     }
 }
